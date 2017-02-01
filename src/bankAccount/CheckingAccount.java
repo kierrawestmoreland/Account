@@ -31,6 +31,9 @@ public class CheckingAccount extends Account{
 		return balance;
 	}
 	
-	
+	public int sendToSavings(int transaction) {
+		super.sendToSavings(transaction);
+		return balance;
+	}
 
 }

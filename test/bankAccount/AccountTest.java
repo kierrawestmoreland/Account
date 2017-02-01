@@ -16,19 +16,19 @@ public class AccountTest {
 	@Test
 	public void shouldReturnBalance(){
 		int account = (int) underTest.getBalance();
-		Assert.assertEquals(account, 100); 
+		Assert.assertEquals(100, account); 
 	}
 	
 	@Test
 	public void shouldDepositAmount(){
 		int deposit = (int) underTest.deposit(100);
-		Assert.assertEquals(deposit, 200);
+		Assert.assertEquals(200, deposit);
 	}
 	
 	@Test
 	public void shouldWithdrawAmount(){
 		int withdraw = (int) underTest.withdraw(50);
-		Assert.assertEquals(withdraw, 50);
+		Assert.assertEquals(50, withdraw);
 	}
 	
 	@Test 
@@ -40,15 +40,15 @@ public class AccountTest {
 	@Test
 	public void shouldReturnCustomerName(){
 		String customerName = underTest.getCustomerName();
-		Assert.assertEquals(customerName, "Kierra");
+		Assert.assertEquals("Kierra", customerName);
 	}
 	
 	@Test
 	public void shouldReturnAccountTypeAndNumber(){
 		String accountNumber = underTest.getAccountNumber();
-		Assert.assertEquals(accountNumber, "12345");
+		Assert.assertEquals("12345", accountNumber);
 		String accountType = underTest.getAccountType();
-		Assert.assertEquals(accountType, "checking");
+		Assert.assertEquals("checking", accountType);
 		
 	}
 }

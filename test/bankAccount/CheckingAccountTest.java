@@ -16,18 +16,18 @@ public class CheckingAccountTest {
 	@Test
 	public void shouldDecreaseBalanceByWritingCheck(){
 		int remainingBalance = (int) underTest.writeCheck(20);
-		Assert.assertEquals(remainingBalance, 100);
+		Assert.assertEquals(100, remainingBalance);
 	}
 	
 	@Test
 	public void shouldSendFriendMoney(){
 		int remainingBalance = (int) underTest.wireAFriend("send money", 50);
-		Assert.assertEquals(remainingBalance, 70);
+		Assert.assertEquals(70, remainingBalance);
 	}
 	
 	@Test
 	public void shouldReceiveMoneyFromFriend(){
 		int remainingBalance = (int) underTest.wireAFriend("request money", 50);
-		Assert.assertEquals(remainingBalance, 170);
+		Assert.assertEquals(170, remainingBalance);
 	}
 }

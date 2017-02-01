@@ -2,7 +2,7 @@ package bankAccount;
 
 public class Account {
 
-	private int balance;
+	protected int balance;
 	private String customerName;
 	private String accountNumber;
 	private String accountType;

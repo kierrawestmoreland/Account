@@ -21,7 +21,7 @@ public class CheckingAccountTest {
 	
 	@Test
 	public void shouldSendFriendMoney(){
-		int remainingBalance = (int) underTest.payAFriend(50);
+		int remainingBalance = (int) underTest.wireAFriend("send money", 50);
 		Assert.assertEquals(remainingBalance, 70);
 	}
 }

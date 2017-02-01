@@ -24,4 +24,10 @@ public class CheckingAccountTest {
 		int remainingBalance = (int) underTest.wireAFriend("send money", 50);
 		Assert.assertEquals(remainingBalance, 70);
 	}
+	
+	@Test
+	public void shouldReceiveMoneyFromFriend(){
+		int remainingBalance = (int) underTest.wireAFriend("request money", 50);
+		Assert.assertEquals(remainingBalance, 170);
+	}
 }

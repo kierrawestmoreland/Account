@@ -8,6 +8,20 @@ public class CheckingAccount extends Account{
 		super(balance, customerName, accountNumber, accountType);
 		CheckingAccount.checkingBalance = balance;
 	}
+	
+	@Override
+	public int withdraw(int transaction) {
+		checkingBalance -= transaction;
+		System.out.println("Your balance is now $" + checkingBalance);
+		return checkingBalance;
+	}
+	
+	@Override
+	public int deposit(int transaction) {
+		checkingBalance += transaction;
+		System.out.println("Your balance is now $" + checkingBalance);
+		return checkingBalance;
+	}
 
 	public int writeCheck(int checkAmount) {
 		if (checkAmount <= checkingBalance){

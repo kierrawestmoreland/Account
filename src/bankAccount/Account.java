@@ -3,14 +3,14 @@ package bankAccount;
 public class Account {
 
 	protected int balance;
-	private String customerName;
+	private static String customerName;//so the name stays same for all child classes of Account
 	private String accountNumber;
 	private String accountType;
 	
 	
 	public Account(int balance, String customerName, String accountNumber, String accountType) {
 		this.balance = 100; //bank promo - receive $100 when opening up account
-		this.customerName = customerName;
+		Account.customerName = customerName;
 		this.accountNumber = accountNumber;
 		this.accountType= accountType;
 	}

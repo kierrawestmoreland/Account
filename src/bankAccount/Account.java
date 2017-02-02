@@ -48,6 +48,4 @@ public class Account {
 	public String getAccountNumber() {
 		return accountNumber;
 	}
-
-
 }
